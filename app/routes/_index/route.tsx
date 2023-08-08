@@ -36,6 +36,12 @@ export default function () {
 
     return (
         <>
+            <div className="2xl:hidden  text-2xl px-8 py-4 text-white">
+                <ExternalLink href="https://github.com/joms/joms.ninja#no-mobile">
+                    Denne siden nytes best på desktop
+                </ExternalLink>{" "}
+                🫠
+            </div>
             <main className="flex-1 pl-24 pr-44 pb-40 pt-20 container">
                 <div className="flex items-center relative flex-wrap">
                     <h1 className="text-6xl font-light flex-1 z-10" style={{ minWidth: "380px" }}>
