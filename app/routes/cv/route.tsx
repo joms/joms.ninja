@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { getJobsWithContent } from "./fs.server";
 import type { JobContent } from "./components/ContentRenderer";
 import { ContentRenderer } from "./components/ContentRenderer";
+import { Link as CVLink } from "~/components/Link";
 
 export const meta: V2_MetaFunction = () => {
     return [{ title: "CV - Jo Emil Holen" }];
@@ -28,7 +29,11 @@ export default function () {
     return (
         <main className="flex flex-col">
             <section className="mx-10 mt-20 mb-10">
-                <h1 className="text-6xl mb-10 font-light">Jo Emil Holen</h1>
+                <h1 className="text-6xl mb-4 font-light">Jo Emil Holen</h1>
+
+                <CVLink to="/" className="mb-6 inline-block">
+                    Tilbake
+                </CVLink>
 
                 <p className="prose prose-2xl mb-3">
                     Jeg er en frontend-spesialist med en solid forståelse av backendutvikling. Jeg liker å lage gode
@@ -47,7 +52,7 @@ export default function () {
                     return (
                         <Fragment key={r.filename}>
                             <Link
-                                className="flex 2xl:justify-center z-10 bg-white 2xl:w-44 cursor-pointer py-5 hover:pl-8 2xl:hover:pl-0 2xl:hover:pt-10 transition-all 2xl:border-r-2 border-b-2 border-pink-400"
+                                className="flex 2xl:justify-center z-10 bg-white 2xl:w-44 cursor-pointer py-5 hover:pl-8 2xl:hover:pl-0 2xl:hover:pt-10 transition-all 2xl:border-r-2 2xl:border-b-0 border-b-2 border-pink-400"
                                 style={{ borderRightWidth: "0.25rem" }}
                                 to={`.?active=${r.filename.replace(".mdx", "")}`}
                                 preventScrollReset
